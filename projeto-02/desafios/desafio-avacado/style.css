@@ -1,18 +1,78 @@
 @charset "utf-8";
 
-:root {
-    --cor1:#050866;
-    --cor2:#090FB3;
-    --cor3:#0B13E6;
-    --cor4:#242666;
-    --cor5:#5257EA;
-    --cor6:rgb(1, 2, 59);
-    --cor7:rgb(100, 100, 100);
+@import url('https://fonts.googleapis.com/css2?family= JetBrains+Mono:wght@400;700 &display=swap');
 
-    --font-padrao:arial, verdana, helvetica, sans-serif;
-    --font-destak:arial, verdana, helvetica, sans-serif;
+:root {
+    --black: #000000;
+    --purple-project:#2F2E41;
+    --green_project:#00BFA6;
+    --grey_project:#C2C2C2;
+    --white:#FFFFFF;
+  
+
+    /* --font-padrao: 'JetBrains Mono', 'monospace';
+    --font-teste: Arial, sans-serif,  */
+}
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    background: lightyellow;
+    background:var(--purple-project);
+
+    padding: 40px;
+
+    text-align: center;
+    
+    color: white;
+    /* font-family: 'JetBrains Mono', 'monospace';
+    font-family: var(--font-teste); */
+
+    max-height: 100vh;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 800px;
+    height: 30px;
+
+    margin: 0 auto 0;
+}
+
+header nav ul{
+    display: flex;
+    justify-content: space-around;
+    
+    width: 306px;
+
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+
+    width: 800px; 
+    min-height: 283px;
+
+    margin: 100px auto 0;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+p {
+    font-size: 16px;
+}
+
