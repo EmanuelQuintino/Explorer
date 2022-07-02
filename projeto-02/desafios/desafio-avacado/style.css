@@ -8,18 +8,9 @@
     --green_project:#00BFA6;
     --grey_project:#C2C2C2;
     --white:#FFFFFF;
-  
 
-    /* 
-
-    font-family: 'JetBrains Mono', monospace;
-    font-family: 'Open Sans', sans-serif;
-    
-    */
-
-
-    /* --font-destaque: 'JetBrains Mono', 'monospace';
-    --font-padrao: 'Open Sans', sans-serif; */
+    --font-destaque: 'JetBrains Mono', 'monospace';
+    --font-padrao: 'Open Sans', sans-serif;
     
 }
 
@@ -29,18 +20,13 @@
 }
 
 body {
-    /* background:var(--purple-project); */
-
     padding: 40px;
 
     text-align: center;
     
     color: white;
     
-    /* font-family: 'JetBrains Mono', 'monospace'; */
-    /* font-family: var(--font-destaque); */
-
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--font-destaque);
 
     max-height: 100vh;
 }
@@ -78,15 +64,15 @@ header nav ul{
 ul a {
     text-decoration: none;
 
-    opacity: .5;
-
     color: white;
 
     font-size: 14px;
+
+    padding: .7rem;
 }
 
 nav ul a:hover {
-    opacity: 1;
+    background-color: #00bfa638;
 }
 
 main {
@@ -99,12 +85,11 @@ main {
 
 #main-text {
     width: 600px;
-
-    font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 35px;
+    width: 600px;
 }
 
 p {
@@ -140,7 +125,6 @@ footer {
 
     position: relative;
 
-    /* border: solid red; */
 }
 
 footer p {
