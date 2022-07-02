@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Poppins&display=swap');
+
+:root {
+    --color-font: #42D3FF;
+    --color-background-form: #D6D6D6;
+    --color-background-header: #121214;
+    --color-background-body: #E5E5E5;
+
+    --font-destaque-archivo: 'Archivo', sans-serif;
+    --font-padrao-poppins: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--font-padrao-poppins);
+    background: var(--color-background-body);
+}
+
+body::before {
+    content: '';
+    width: 100%;
+    height: 360px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    background: var(--color-background-header);
+}
+
+#page {
+    width: 740px;
+    margin: 0 auto 0;
+}
+
+header {
+    width: 320px;
+    margin-top: 75px;
+}
+
+header h1 {
+    font-family: var(--font-destaque-archivo);
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    color: white;
+}
+
+header p {
+font-size: 16px;
+line-height: 26px;
+
+color: var(--color-font);
+}
+
+form {
+    background: var(--color-background-form);
+    margin-top: 38px;
+    border-radius: 8px;
+    min-height: 300px;
+
+    padding: 64px;
+}
+
+fieldset {
+    border: none;
+}
+
+fieldset legend {
+    font-family: var(--font-padrao-poppins);
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 34px;
+
+    border-bottom: 1px solid #E6E6F0;
+}
