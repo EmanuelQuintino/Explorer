@@ -10,18 +10,81 @@
 </head>
 <body>
     <section id="page">
+        
         <header>
+            
             <h1>Crie e compartilhe seu evento</h1>
+            
             <p>
                 O primeiro passo, é preencher esse formulário de inscrição.
             </p>
+        
         </header>
 
         <form action="">
             <fieldset>
-                <legend>Informações do Evento</legend>
+                <div class="fieldset-wrapper">
+                    
+                    <legend>Informações do Evento</legend>
+                
+                    <div class="input-wrapper">
+                        
+                        <label for="event-title">
+                            Título do evento <span>( mínimo 8 caracteres )</span>
+                        </label>
+                        
+                        <input type="text" id="event-title">
+                    
+                    </div>
+
+                    <div class="input-wrapper"> 
+                        
+                        <label for="event-link">
+                            Link do evento <span>( comece com https:// )</span>
+                        </label>
+                        
+                        <input type="url" id="event-link">
+                    
+                    </div>
+
+                    <div class="input-wrapper"> 
+                       
+                        <label for="event-whatsapp">
+                            Whatsapp para contato <span>( somente núemros )</span>
+                        </label>
+                        
+                        <input type="number" id="event-whatsapp">
+                    
+                    </div>
+
+                    <div class="input-wrapper"> 
+                        
+                        <label for="event-information">
+                            Informações extras
+                        </label>
+                        
+                        <textarea name="" id="event-information" cols="30" rows="10"></textarea>
+                    
+                    </div>
+
+                    <div class="input-wrapper"> 
+                       
+                        <label for="event-category">
+                            Categoria
+                        </label>
+                        
+                        <select name="" id="event-category">
+                            <option value="live">Ao vivo</option>
+                            <option value="podcast">Podcast</option>
+                            <option value="mentorship">Mentorship</option>
+                        </select>
+                    
+                    </div>
+                
+                </div>
             </fieldset>
         </form>
+    
     </section>
 
     
