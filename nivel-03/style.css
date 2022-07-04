@@ -6,10 +6,14 @@
     --color-font-label: #4E4958;
     --color-font-span: #686868;
     --color-font-spanHover: #242424;
+    --color-line-footer: #D6D6D6;
 
     --color-background-header: #121214;
     --color-background-body: #E5E5E5;
     --color-background-form: #FAFAFC;
+    --color-background-footer: #F0F0F4;
+    --color-background-button: #04D361;
+    --color-background-buttonHover: #0e974c;
 
     --font-destaque-archivo: 'Archivo', sans-serif;
     --font-padrao-poppins: 'Poppins', sans-serif;
@@ -69,7 +73,7 @@ color: var(--color-font-text);
 form {
     background: var(--color-background-form);
     margin-top: 38px;
-    border-radius: 8px;
+    border-radius: 8px 8px 0 0 ;
     min-height: 300px;
 
     padding: 64px;
@@ -205,4 +209,42 @@ fieldset legend {
 
 .checkbox-wrapper input:focus + label::before {
     outline: 2px solid black;
+}
+
+footer {
+    background: var(--color-background-footer);
+    
+    height: 136px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 40px 64px;
+
+    margin-bottom: 100px;
+
+    border-top: 1px solid var(--color-line-footer);
+
+    border-radius: 0 0 8px 8px;
+}
+
+footer .button {
+    height: 56px;
+    
+    background: var(--color-background-button);
+    
+    border-radius: 8px;
+    border: 0;
+
+    font-family: var(--font-destaque-archivo);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+
+    color: white;
+
+}
+
+footer .button:hover {
+    background:var(--color-background-buttonHover);
 }
