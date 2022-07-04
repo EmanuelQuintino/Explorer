@@ -4,8 +4,8 @@
     --color-font-text: #42D3FF;
     --color-line-legend: #E6E6F0;
     --color-font-label: #4E4958;
-    --color-font-span: #C1BCCC;
-    --color-font-spanHover: #686868;
+    --color-font-span: #686868;
+    --color-font-spanHover: #242424;
 
     --color-background-header: #121214;
     --color-background-body: #E5E5E5;
@@ -73,6 +73,10 @@ form {
     min-height: 300px;
 
     padding: 64px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
 }
 
 fieldset {
@@ -151,4 +155,6 @@ fieldset legend {
     background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
     background-position: right 24px top 50%;
+
+    color: var(--color-font-label);
 }
