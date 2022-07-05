@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap');
 
 :root {
-    --color-gray: #535971;
+    --color-purple: #535971;
     --color-pink: #FF5374;
     --color-light-gray: #EFEFEF;
     --color-background-input: #FAFAFC;
     --color-boder-input: #E6E6F0;
-    --color-font-legend: #535971;
     --color-font-label: #4E4958;
     --color-label-span: #696969;
 
@@ -35,7 +34,7 @@ body::before {
     top: 0;
     z-index: -1;
 
-    background: var(--color-gray);
+    background: var(--color-purple);
 
 }
 
@@ -76,6 +75,14 @@ main {
     border-radius: 20px 20px 0 0;
 
     padding: 44px 64px;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 fieldset {
@@ -83,11 +90,10 @@ fieldset {
 
     display: flex;
     flex-direction: column;
-    gap: 30px;
 }
 
 legend {
-    color: var(--color-font-legend);
+    color: var(--color-purple);
     
     font-family: var(--font-title-staatliches);
     font-weight: 400;
@@ -97,7 +103,7 @@ legend {
     border-bottom: 1px solid var(--color-boder-input);
     width: 622px;
 
-    padding-bottom: 16px;
+    padding-bottom: 8px;
     
 }
 
@@ -105,7 +111,7 @@ section#name {
     display: flex;
     gap: 22px;
 
-    margin-top: 20px;
+    margin-top: 36px;
 }
 
 label {
@@ -134,6 +140,12 @@ input {
     
     border: 1px solid var(--color-boder-input);
     border-radius: 8px;
+
+    padding: 12px;
+
+    font-size: 20px;
+
+    color: var(--color-purple);
 }
 
 span {
@@ -141,4 +153,65 @@ span {
 
     font-size: 12px;
     line-height: 20px;
+}
+
+.fieldset-date {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.fieldset-date :nth-child(2) {
+    width: 100%;
+}
+
+.fieldset-date legend {
+    font-size: 20px;
+    line-height: 34px;
+    border: none;
+    padding: 0;
+    padding-top: 32px;
+}
+
+.fieldset-date label {
+    padding: 0;
+}
+
+footer {
+    background: var(--color-purple);
+
+    width: 751px;
+    height: 160px;
+
+    border-radius: 0 0 20px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 52px 71px;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
+}
+
+button {
+    background: var(--color-pink);
+    
+    width: 608px;
+    height: 56px;
+
+    border: none;
+    border-radius: 20px;
+
+    color: white;
+    
+    font-family: var(--font-title-staatliches);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 26px;
+
+
+
+    
 }
