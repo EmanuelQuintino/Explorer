@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap');
+
+:root {
+    --color-gray: #535971;
+    --color-pink: #FF5374;
+    --color-light-gray: #EFEFEF;
+    --color-background-input: #FAFAFC;
+    --color-boder-input: #E6E6F0;
+    --color-font-legend: #535971;
+    --color-font-label: #4E4958;
+    --color-label-span: #696969;
+
+    --font-title-staatliches: 'Staatliches', cursive;
+    --font-text-poppins: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-text-poppins);
+    background: var(--color-light-gray);
+}
+
+body::before {
+    content: '';
+    width: 100%;
+    height: 436px;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+    background: var(--color-gray);
+
+}
+
+#page {
+    width: 750px;
+    margin: 0 auto;
+}
+
+header {
+    color: white;
+
+}
+
+header h1 {
+    margin-top: 138px;
+    margin-bottom: 18px;
+    
+    font-family: var(--font-title-staatliches);
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 60px;
+}
+
+header p {
+    margin-bottom: 78px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+main {
+    background: white;
+
+    height: 1084px;
+
+    border-radius: 20px 20px 0 0;
+
+    padding: 44px 64px;
+}
+
+fieldset {
+    border: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+legend {
+    color: var(--color-font-legend);
+    
+    font-family: var(--font-title-staatliches);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 34px;
+
+    border-bottom: 1px solid var(--color-boder-input);
+    width: 622px;
+
+    padding-bottom: 16px;
+    
+}
+
+section#name {
+    display: flex;
+    gap: 22px;
+
+    margin-top: 20px;
+}
+
+label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    
+    color: var(--color-font-label);
+
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+section#name input {
+    width: 300px;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    height: 56px;
+    background: var(--color-background-input);
+    
+    border: 1px solid var(--color-boder-input);
+    border-radius: 8px;
+}
+
+span {
+    color: var(--color-label-span);
+
+    font-size: 12px;
+    line-height: 20px;
+}
