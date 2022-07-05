@@ -7,6 +7,7 @@
     --color-font-span: #686868;
     --color-font-spanHover: #242424;
     --color-line-footer: #D6D6D6;
+    --color-border-invalid: #FF1010;
 
     --color-background-header: #121214;
     --color-background-body: #E5E5E5;
@@ -247,4 +248,8 @@ footer .button {
 
 footer .button:hover {
     background:var(--color-background-buttonHover);
+}
+
+input:invalid {
+    border: 2px solid var(--color-border-invalid);
 }
