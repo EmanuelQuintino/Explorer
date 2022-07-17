@@ -77,9 +77,12 @@ main {
     animation-timing-function: ease-in-out;
 }
 
-section.card img {
+img {
     width: 100%;
     height: auto;
+}
+
+section.card img {
 
     object-fit: cover;
 
@@ -162,7 +165,7 @@ section.card h2 span {
 @media (min-width: 600px) {
     .page {
         max-width: 900rem;
-        padding: 0 35rem;
+        padding: 32rem 35rem;
     }
     
     header p {
@@ -174,7 +177,7 @@ section.card h2 span {
         font-size: 60rem;
         line-height: 72rem;
 
-        margin-top: 27rem;
+        margin-top: 16rem;
     }
 
     .page main {
@@ -200,7 +203,7 @@ section.card h2 span {
     }
     
     section.card img {
-        width: auto;
-        height: 180rem;
+        width: 100%;
+        height: 240rem;
     }
 }
