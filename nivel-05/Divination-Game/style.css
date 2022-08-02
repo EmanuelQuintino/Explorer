@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+
+:root {
+    font-size: 6.25%;
+}
+
+* {
+    font-size: 16rem;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(287.56deg, #C2E9FB 0%, #A1C4FD 100%);
+}
+
+body, input, button {
+    font-family: 'DM Sans', sans-serif;
+}
+
+main {
+    width: min(428rem, 80%);
+    height: 273.72rem;
+
+    margin: 200rem auto 246rem;
+
+    padding: 48rem 64rem 64rem;
+
+    background: #FFFFFF;
+    box-shadow: 0rem 2rem 4rem rgba(0, 0, 0, 0.1);
+    border-radius: 6rem;
+
+    font-size: 16rem;
+    font-weight: 400;
+    line-height: 21rem;
+    text-align: center;
+}
+
+
+.game-title {
+    width: 300rem;
+    height: 60rem;
+
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: Montserrat;
+    font-size: 24rem;
+    font-weight: 600;
+    line-height: 29rem;
+    text-align: center;
+
+    margin-bottom: 16rem;
+
+}
+
+h1, h2, p {
+    color: #34355B;
+}
+
+p {
+    opacity: 0.8;
+}
+
+form {
+    margin-top: 48rem;
+
+    height: 54rem;
+
+    display: flex;
+    justify-content: center;
+}
+
+input, button {
+    border: none;
+    padding: 16rem;
+}
+
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input {
+    background: #DCE2E9;
+    width: 48rem;
+    border-radius: 4rem 0 0 4rem;
+    text-align: center;
+}
+
+button {
+    background: #7879F1;
+    color: #FFFFFF;
+    
+    font-weight: bold;
+    
+    width: 82rem;
+
+    border-radius: 0 4rem 4rem 0;
+
+    cursor: pointer;
+
+    transition: background 200ms;
+}
+
+button:hover{
+    background: #6a6ad6;
+}
+
+.hide {
+    display: none;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 150%
+}
+
+.screen-2 button {
+    width: 176rem;
+    height: 56rem;
+    
+    border-radius: 4rem;
+
+    font-size: 16rem;
+
+    margin-top: 33rem;
+}
