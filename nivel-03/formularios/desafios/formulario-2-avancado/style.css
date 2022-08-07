@@ -215,3 +215,36 @@ fieldset#mentor-information label {
 .checkbox-wrapper input:focus + label::before {
     outline: 2px solid black;
 }
+
+.next-scheduling {
+    width: 622px;
+    height: 162px;
+    
+    margin-top: 36px;
+}
+
+.day-hour {
+    display: flex;
+    gap: 20px;
+
+    width: 622px;
+
+    color: var(--color-font-label);
+
+    margin-top: 32px;
+}
+
+.day-hour div:nth-child(1) input {
+    width: 300px;
+}
+
+.day-hour div:nth-child(2) input {
+    width: 140px;
+}
+
+.day-hour div:nth-child(3) input {
+    width: 140px;
+}
+
+
+
