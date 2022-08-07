@@ -229,7 +229,7 @@ fieldset#mentor-information label {
 
     width: 622px;
 
-    color: var(--color-font-label);
+    /* color: var(--color-font-label); */
 
     margin-top: 32px;
 }
@@ -246,5 +246,25 @@ fieldset#mentor-information label {
     width: 140px;
 }
 
+button {    
+    padding: 15px 40px;
 
+    width: 622px;
+    height: 51px;
+
+    background: #F67669;
+    border-radius: 8px;
+
+    margin: 48px auto 64px;
+
+    border: none;
+
+    font-family: 'Staatliches';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+
+    color: #FFFFFF;
+}
 
