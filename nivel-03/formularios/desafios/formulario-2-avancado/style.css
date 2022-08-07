@@ -143,6 +143,9 @@ span {
 
 fieldset#mentor-information {
     margin-top: 32px;
+
+    width: 622px;
+    height: 444px;
 }
 
 legend {
@@ -165,3 +168,50 @@ legend {
     width: 300px;
 }
 
+textarea {
+    background: #FAFAFC;
+    width: 608px;
+    height: 166px;
+
+    border: 1px solid #E6E6F0;
+    border-radius: 8px;
+
+    padding: 8px 16px;
+}
+
+fieldset#mentor-information label {
+    margin-top: 32px;
+}
+
+.checkbox-wrapper label {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    
+    margin: 0;
+}
+.checkbox-wrapper input {
+    position: absolute;
+    /* z-index: -1;    */
+    opacity: 0;
+
+    width: 24px;
+    height: 24px;
+}
+
+.checkbox-wrapper label::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+
+    border: 1px solid #E6E6F0;
+    border-radius: 8px;
+}
+
+.checkbox-wrapper input:checked + label::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.00016 16.1698L4.83016 11.9998L3.41016 13.4098L9.00016 18.9998L21.0002 6.99984L19.5902 5.58984L9.00016 16.1698Z' fill='%2342D3FF'/%3E%3C/svg%3E%0A");
+}
+
+.checkbox-wrapper input:focus + label::before {
+    outline: 2px solid black;
+}
