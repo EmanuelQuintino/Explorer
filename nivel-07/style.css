@@ -4,12 +4,15 @@
     box-sizing: border-box;
 }
 
-h1 {
-    font-size: 2rem;
-    color: red;
+main {
+    margin: 4rem 8rem;
 }
 
-p {
-    font-size: 1.5rem;
-    color: red;
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    font-size: 2rem;
 }
