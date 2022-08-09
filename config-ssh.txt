@@ -1,0 +1,89 @@
+O SSH é uma sigla para Secure Shell, um termo e protocolo de um mecanismo de segurança na rede. 
+
+### Gerando a chave SSH
+
+1. Abra `Terminal` *(macOS / Linux)* `Git Bash` *(Windows)*
+
+1. Cole o comando abaixo, substituindo o endereço de e-mail pelo seu GitHub.
+
+```bash
+ssh-keygen -t ed25519 -C "seuemail@gmail.com"
+```
+
+1. Isto cria uma nova chave SSH, usando o nome de e-mail fornecido como uma etiqueta.
+
+```
+> Generating public/id_algorithm key pair.
+```
+
+1. Quando aparecer a solicitação **"Enter a file in which to save the key"**, pressione `ENTER`. 
+    
+    O local padrão do arquivo será aceito.
+    
+
+```bash
+> Enter a file in which to save the key (/Users/you/.ssh/id_algorithm): [Press enter]
+```
+
+1. (Opcional) Digite uma senha secreta segura no prompt. Para obter mais informações, consulte ["Trabalhar com frases secretas da chave SSH](https://docs.github.com/pt/articles/working-with-ssh-key-passphrases)".
+
+```
+> Enter passphrase (empty for no passphrase):[Type a passphrase]
+> Enter same passphrase again:[Type passphrase again]
+```
+
+1. Inicie o ssh-agent em segundo plano
+
+```bash
+eval "$(ssh-agent -s)"
+```
+
+1. Adicione sua chave SSH privada ao ssh-agent
+
+```bash
+ssh-add ~/.ssh/id_ed25519
+```
+
+---
+
+### Importando para o Github
+
+1. Ainda no terminal, navegue até a pasta onde a chave SSH foi salva com o comando:
+
+```bash
+nano ~/.ssh/id_ed25519.pub
+```
+
+2. Copie o código inteiro que aparecerá no seu terminal e depois pressione **CTRL + X** para sair
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b91552b4-3355-45c4-9bfe-2bb272074db3/Untitled.png)
+
+> Ocultamos a chave SSH da imagem acima por questões de segurança, mas a estrutura será algo parecido com o exemplo abaixo 👇🏻
+> 
+
+```bash
+ssh-ed25519 AAbiroAACENzaC1lZDI1biroNTE5BBBBILkGTLMnPXIpbiroT56XhJwRjUrU9C4osFEVYX1Ezys3fe33 oi@rocketsesat.com.br
+```
+
+3. Acesse as configurações do seu Github
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/215647d0-85be-4c8b-b21b-53afa5126789/Untitled.png)
+
+1. Clique em SSH and GPG Keys
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d1898bc8-628b-4f40-a854-5b32f169f191/Untitled.png)
+
+1. Clique no botão para criar uma nova chave SSH
+
+    
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/23f412f2-5bb3-4dce-9300-adcba0d3820b/Untitled.png)
+    
+
+1. Adicione um título para sua chave e cole o conteúdo copiado do **passo 2** no campo **Key** e clique em **Add SSH Key**
+
+    
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c692bacd-486f-40c1-af61-2eae21363ebc/Untitled.png)
+    
+    1. Agora sempre que for fazer um `git clone`, utilize a opção SSH
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4732ac5c-e3d1-4f62-8c32-6fceb9096808/Untitled.png)
