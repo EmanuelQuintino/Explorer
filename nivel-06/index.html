@@ -20,10 +20,29 @@
         <div class="app"></div>
 
         <script>
+
+            const routes = {
+                "/": "/pages/home.html",
+                "/about": "/pages/about.html",
+                "/contact": "/pages/contact.html",
+                404: "/pages/404.html",
+            }
+
             function route(event) {
                 event = event || window.event
                 event.preventDefault()
+
+                window.history.pushState({}, "", event.target.href)
+
+                handle()
             }
+
+            function handle() {
+                // Desestruturando o objeto {propriedadrot x, propriedade y, propriedade z}
+                const {pathname} = window.location 
+                console.log(pathname)
+            }
+
         </script>
     </main>
 </body>
