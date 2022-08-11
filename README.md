@@ -1,2 +1,2 @@
-# explorer
+# Explorer
  Curso Explorer - Rocketseat
