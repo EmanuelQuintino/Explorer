@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class SPA</title>
+
+    <script src="scripts/index.js" type="module" defer></script>
 </head>
 <body>
     <header>
@@ -17,51 +19,7 @@
     </header>
 
     <main>
-        
         <div class="app"></div>
-
-        <script>
-
-            const routes = {
-                "/": "/nivel-06/pages/home.html",
-                "/about": "/nivel-06/pages/about.html",
-                "/contact": "/nivel-06/pages/contact.html",
-                404: "/nivel-06/pages/404.html",
-            }
-
-            function route(event) {
-                event = event || window.event
-                event.preventDefault()
-
-                window.history.pushState({}, "", event.target.href)
-
-                handle()
-            }
-
-            function handle() {
-                // Desestruturando o objeto {propriedadrot x, propriedade y, propriedade z}
-                const {pathname} = window.location 
-                // console.log(pathname)
-                
-                const route = routes[pathname] || routes[404]
-                
-                // console.log('Antes do fetch()')
-                
-                fetch(route)
-                .then(data => data.text())
-                .then(html => {
-                    document.querySelector('.app').innerHTML = html
-                })
-
-                // console.log(route)
-
-            }
-
-            handle()
-
-            window.onpopstate = () => {handle()}            
-
-        </script>
     </main>
 </body>
 </html>
