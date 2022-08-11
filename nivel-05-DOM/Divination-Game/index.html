@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Adivinhação</title>
+
+    <!-- https://www.figma.com/file/RXWJF3wvvciCesYWEK7V8p/Jogo-Adivinha%C3%A7%C3%A3o-(Copy)?node-id=0%3A1 -->
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    <main class="page">
+        <article class="screen-1">
+
+            <section class="game-title">
+                <h1>Jogo da Adivinhação</h1>
+                <p>Adivinhe o número entre 0 e 10</p>
+            </section>
+            
+            <section class="game-play">
+                <form>
+                    <input id="inputNumber" type="number" min="0" max="10" autofocus>
+                    <button id="tryButton">Tentar</button>
+                </form>
+            </section>
+        
+        </article>
+
+        <article class="screen-2 hide">
+
+            <section class="game-title">
+                <h2>Acertou em X tentativas</h1>
+                <button>Jogar Novamente</button>
+            </section>
+            
+        
+        </article>
+    </main>
+</body>
+</html>

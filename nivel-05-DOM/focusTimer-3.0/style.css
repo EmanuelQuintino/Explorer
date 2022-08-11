@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+
+    font-size: 6.25%;
+    --font-size-standard: 16rem;
+
+    --font-standard: 'Roboto', sans-serif;
+    
+    
+    --hue-text: 240;
+    --color-text: hsl(var(--hue-text), 6%, 21%);
+    --color-text-select: #FFF;
+
+    --hue-background: 0;
+    --color-background-body: hsl(var(--hue-background), 0%, 95%);
+    --color-background-imgNone: hsl(var(--hue-text), 9%, 89%);
+    --color-background-imgSelect: rgb(3, 120, 156);
+    --color-background-imgSelectShadow: rgba(3, 120, 156, 0.2);
+
+    --color-background-dark:  hsl(240, 5%, 7%);
+    --color-background-darkImg: #0A3442;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: var(--font-size-standard);
+    font-family: var(--font-standard);
+    
+    color: var(--color-text);   
+    
+    background: var(--color-background-body);
+    
+    height: 80vh;
+    
+    padding: 196rem 296rem;
+    
+    position: relative;
+}
+
+.darkMode {
+    background: var(--color-background-dark);
+    transition: 200ms;
+}
+
+.hide {
+    display: none;
+    transition: 200ms;
+}
+.mode {
+    position: absolute;
+    
+    right: 64rem;
+    top: 64rem;
+}
+
+.mode button {
+    opacity: 0.7;
+}
+
+.mode button:hover {
+    opacity: 1;
+}
+
+.page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 192rem;
+    
+    width: 821rem;
+    height: 336rem;
+    
+}
+
+main {
+    width: 321rem;
+    height: 213rem;
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 48rem;
+}
+
+main .timer {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 126rem;
+    line-height: 148rem;
+    text-align: center;
+    text-transform: uppercase;
+    
+    width: 321rem;
+    height: 117rem;
+    
+    text-align: center;
+    text-transform: uppercase;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.timer {
+    color: var(--color-text);
+    opacity: 0.7;
+}
+
+.timerSelect {
+    color: var(black);
+    text-shadow: 0rem 0rem 1rem  white;
+    transition: 200ms;
+    opacity: 1;
+}
+
+.timerSelectOff {
+    color: var(--color-text);
+    transition: 200ms;
+    opacity: 0.7;
+}
+
+.timerDark {
+    color: var(--color-text-select);
+    transition: 200ms;
+    opacity: 0.3;
+}
+
+.selectTimerDark {
+    color: var(--color-text-select);
+    text-shadow: 0rem 0rem 1rem  black;
+    transition: 200ms;
+    opacity: 1;
+}
+
+button {
+    border: none;
+    background: none;
+
+    cursor: pointer;
+}
+
+main .controls{
+    width: 312rem;
+    height: 48rem; 
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40rem; 
+}
+
+.controls button {
+    width: 48rem;
+    height: auto;
+
+    opacity: 0.3;
+}
+
+.controls button:hover {
+    opacity: 0.8;
+    transition: 200ms;
+}
+
+.controls svg path {
+    fill:hsl(240, 6%, 5%);
+}
+
+.controlsDark svg path{
+    fill: var(--color-text-select);
+}
+
+
+aside.cards{
+    width: 308px;
+    height: 336px;
+
+    display: grid;
+    grid-template-areas: "A B" 
+                         "C D";
+    gap: 32rem;
+}
+
+aside.cards button:hover {
+    transform: scale(1.1);
+}
+
+.cardAnimationScale {
+    animation-name: cardAnimationScale;
+    animation-duration: 3000ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+
+.cardAnimationRotateX {
+    animation-name: cardAnimationRotateX;
+    animation-duration: 3000ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+
+.cardAnimationRotateZ {
+    animation-name: cardAnimationRotateZ;
+    animation-duration: 3000ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+
+.cards svg path {
+    fill: var(--color-background-imgNone);
+}
+
+.cards svg path:nth-child(2),
+.cards svg path:nth-child(3),
+.cards svg path:nth-child(4) {
+    fill: var(--color-text);
+}
+
+.cardsDark svg path:nth-child(1) {
+    fill: #29292E;
+    transition: 200ms;
+}
+
+.cardsDark svg path:nth-child(2),
+.cardsDark svg path:nth-child(3),
+.cardsDark svg path:nth-child(4) {
+    fill: var(--color-text-select);
+    transition: 200ms;
+}
+
+.selectDark {
+    color: #FFF;
+    transition: 200ms;
+}
+
+.select svg path:nth-child(1) {
+    fill: var(--color-background-imgSelect);
+    transition: 200ms;
+}
+
+.select svg path:nth-child(2),
+.select svg path:nth-child(3),
+.select svg path:nth-child(4) {
+    fill: var(--color-text-select);
+    transition: 200ms;
+}
+
+.select input[type=range],
+.select input[type=range]::-webkit-slider-thumb{
+    background: #FFF;
+}
+
+.selectDarkImg input[type=range],
+.selectDarkImg input[type=range]::-webkit-slider-thumb{
+    background: #0A3442;
+}
+
+.selectDarkImg svg path:nth-child(1) {
+    fill: #0A3442;
+    transition: 200ms;
+}
+
+.card {
+    position: relative;
+}
+
+input[type=range] {
+    all: unset;
+    
+    background: #323238;
+    
+    height: 4rem;
+    width: 90rem;
+
+    border-radius: 2rem;
+
+    position: absolute;
+    top: 118rem;
+    left: 24rem;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    all: unset;
+    
+    background: #323238;
+    
+    height: 16rem;
+    width: 16rem;
+    
+    border-radius: 50%;
+
+    display: flex;
+}
+
+section.slideVolumeClick input[type=range],
+section.slideVolumeClick input[type=range]::-webkit-slider-thumb{
+    background: #FFF;
+}
+
+
+
+@keyframes cardAnimationScale {
+    0% {
+        transform: scale(1);
+    }
+    
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes cardAnimationRotateX {
+    0% {
+        transform: rotateX(0deg);
+    }
+    
+    50% {
+        transform: rotatex(180deg);
+    }
+
+    100% {
+        transform: rotateX(360deg);
+    }
+}
+
+@keyframes cardAnimationRotateZ {
+    0% {
+        transform: rotatez(0deg);
+    }
+
+    100% {
+        transform: rotatez(360deg);
+    }
+}
+
+
+
+@media (max-width: 700px) {
+
+    body {
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 0 auto;
+
+        padding: 0;
+    }
+
+    main .timer {
+        font-size: 110rem;
+    }
+
+    main .controls{
+        gap: 30rem; 
+    }
+
+    aside.cards{
+        gap: 18rem;
+    }
+
+    .mode {
+        right: 32rem;
+        top: 32rem
+    }
+    
+    article.page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 48rem;
+         
+        margin: 0 auto;
+
+        margin-top: 32rem;
+
+        max-width: 300rem;
+    }
+}
