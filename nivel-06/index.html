@@ -9,15 +9,22 @@
 <body>
     <header>
         <nav>
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
-            <a href="/404">404</a>
+            <a href="/" onclick="route()">Home</a>
+            <a href="/about" onclick="route()">About</a>
+            <a href="/contact" onclick="route()">Contact</a>
+            <a href="/404" onclick="route()">404</a>
         </nav>
     </header>
 
     <main>
         <div class="app"></div>
+
+        <script>
+            function route(event) {
+                event = event || window.event
+                event.preventDefault()
+            }
+        </script>
     </main>
 </body>
 </html>
