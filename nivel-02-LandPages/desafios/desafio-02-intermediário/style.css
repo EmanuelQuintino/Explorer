@@ -51,7 +51,7 @@ a {
 }
 
 .list .item a:hover {
-  font-weight: bold;
+  color: black;
   opacity: 1;
 }
 

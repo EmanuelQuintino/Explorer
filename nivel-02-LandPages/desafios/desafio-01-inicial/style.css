@@ -42,8 +42,8 @@ body {
   }
   
   ul li a:hover {
-    font-weight: bold;
     opacity: 1;
+    color: black;
   }
   
   ul {
