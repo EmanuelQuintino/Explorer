@@ -1,40 +1,13 @@
-const routes = {
-    "/nivel-06/": "/nivel-06/pages/home.html",
-    "/": "/nivel-06/pages/home.html",
-    "/about": "/nivel-06/pages/about.html",
-    "/contact": "/nivel-06/pages/contact.html",
-    404: "/nivel-06/pages/404.html",
-}
+import {Router} from "./route.js"
 
-function route(event) {
-    event = event || window.event
-    event.preventDefault()
+const router = new Router()
+router.add("/nivel-06/", "/nivel-06/pages/home.html"),
+router.add("/", "/nivel-06/pages/home.html"),
+router.add("/about", "/nivel-06/pages/about.html"),
+router.add("/contact", "/nivel-06/pages/contact.html"),
+router.add(404, "/nivel-06/pages/404.html")
 
-    window.history.pushState({}, "", event.target.href)
+router.handle()
 
-    handle()
-}
-
-function handle() {
-    // Desestruturando o objeto {propriedadrot x, propriedade y, propriedade z}
-    const {pathname} = window.location 
-    // console.log(pathname)
-    
-    const route = routes[pathname] || routes[404]
-    
-    // console.log('Antes do fetch()')
-    
-    fetch(route)
-    .then(data => data.text())
-    .then(html => {
-        document.querySelector('.app').innerHTML = html
-    })
-
-    // console.log(route)
-
-}
-
-handle()
-
-window.onpopstate = () => {handle()}
-window.route = () => {route()}
+window.onpopstate = () => {router.handle()}
+window.route = () => {router.route()}
