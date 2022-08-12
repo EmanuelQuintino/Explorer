@@ -13,6 +13,7 @@ body {
     height: 100vh;
 
     font-family: 'Roboto', sans-serif;
+    color: #FFF;
 }
 
 header {
@@ -43,4 +44,16 @@ a.active {
 
 a:hover {
     color: rgb(219, 219, 219);
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 125%;
+}
+
+p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
 }
