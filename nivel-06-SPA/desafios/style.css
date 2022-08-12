@@ -1,25 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-body {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 72px;
+}
+
 .page {
     background-image: url('images/mountains-universe-1.png');
-    background-size: 100%;
     background-repeat: no-repeat;
     height: 100vh;
 
     font-family: 'Roboto', sans-serif;
     color: #FFF;
+
+    width: 1280px;
+    height: 720px;
 }
 
 header {
     display: flex;
     justify-content: left;
     align-items: center;
+    gap: 32px;
 
     padding: 40px 72px;
 }
