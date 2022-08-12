@@ -10,3 +10,33 @@ body {
     background-repeat: no-repeat;
     height: 100vh;
 }
+
+header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    padding: 40px 72px;
+}
+
+header nav ul{
+    display: flex;
+    gap: 32px;
+
+    font-size: 24px;
+    
+    list-style: none;
+}
+
+a {
+    color: #C4C4CC;
+    text-decoration: none;
+}
+
+a:active {
+    color: #FFF;
+}
+
+a:hover {
+    color: #FFF;
+}
