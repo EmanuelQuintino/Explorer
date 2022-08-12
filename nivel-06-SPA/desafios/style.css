@@ -29,14 +29,14 @@ header nav ul{
 }
 
 a {
-    color: #C4C4CC;
+    color: #C4C4CC; 
     text-decoration: none;
 }
 
-a:active {
+a.active {
     color: #FFF;
 }
 
 a:hover {
-    color: #FFF;
+    color: rgb(219, 219, 219);
 }
