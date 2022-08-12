@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page {
+    background-image: url('images/mountains-universe-1.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
