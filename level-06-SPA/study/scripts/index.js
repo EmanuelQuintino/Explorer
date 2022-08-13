@@ -1,12 +1,12 @@
 import {Router} from "./route.js"
 
 const router = new Router()
-router.add("/nivel-06-SPA/study/", "/nivel-06-SPA/study/pages/home.html"),
-router.add("/nivel-06-SPA/study/index.html", "/nivel-06-SPA/study/pages/home.html"),
-router.add("/", "/nivel-06-SPA/study/pages/home.html"),
-router.add("/about", "/nivel-06-SPA/study/pages/about.html"),
-router.add("/contact", "/nivel-06-SPA/study/pages/contact.html"),
-router.add(404, "/nivel-06-SPA/study/pages/404.html")
+router.add("/level-06-SPA/study/", "/level-06-SPA/study/pages/home.html"),
+router.add("/level-06-SPA/study/index.html", "/level-06-SPA/study/pages/home.html"),
+router.add("/", "/level-06-SPA/study/pages/home.html"),
+router.add("/about", "/level-06-SPA/study/pages/about.html"),
+router.add("/contact", "/level-06-SPA/study/pages/contact.html"),
+router.add(404, "/level-06-SPA/study/pages/404.html")
 
 router.handle()
 
