@@ -1,12 +1,12 @@
 import {Router} from "./route.js"
 
 const router = new Router()
-router.add("/nivel-06-SPA/challenges/", "/nivel-06-SPA/challenges/pages/home.html"),
-router.add("/nivel-06-SPA/challenges/index.html", "/nivel-06-SPA/challenges/pages/home.html"),
-router.add("/", "/nivel-06-SPA/challenges/pages/home.html"),
-router.add("/universe", "/nivel-06-SPA/challenges/pages/universe.html"),
-router.add("/exploration", "/nivel-06-SPA/challenges/pages/exploration.html"),
-router.add(404, "/nivel-06-SPA/challenges/pages/404.html")
+router.add("/level-06-SPA/challenges/", "/level-06-SPA/challenges/pages/home.html"),
+router.add("/level-06-SPA/challenges/index.html", "/level-06-SPA/challenges/pages/home.html"),
+router.add("/", "/level-06-SPA/challenges/pages/home.html"),
+router.add("/universe", "/level-06-SPA/challenges/pages/universe.html"),
+router.add("/exploration", "/level-06-SPA/challenges/pages/exploration.html"),
+router.add(404, "/level-06-SPA/challenges/pages/404.html")
 
 router.handle()
 
