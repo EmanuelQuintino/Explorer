@@ -32,7 +32,6 @@ export class Router {
     
         // console.log(route)
     
-    }
-    
+    }    
 }
 
