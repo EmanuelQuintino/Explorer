@@ -44,6 +44,13 @@ header nav ul{
     list-style: none;
 }
 
+main {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 180px;
+}
+
 a {
     color: #C4C4CC; 
     text-decoration: none;
