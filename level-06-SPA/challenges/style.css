@@ -14,7 +14,7 @@ body {
     margin-top: 72px;
 }
 
-.page {
+body .page {
     background-image: url('images/mountains-universe-1.png');
     background-repeat: no-repeat;
     height: 100vh;
