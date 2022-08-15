@@ -50,8 +50,12 @@ main {
 }
 
 a {
-    color: #c4c4cccb; 
     text-decoration: none;
+    color: #FFF;
+}
+
+nav a {
+    color: #c4c4cccb; 
 }
 
 a.select {
@@ -103,8 +107,6 @@ button {
     background-color: transparent;
     
     cursor: pointer;
-
-    
 }
 
 button:hover {
