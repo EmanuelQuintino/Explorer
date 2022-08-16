@@ -33,6 +33,26 @@ body {
     padding: 32rem;
 }
 
+.alertError {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 36rem;
+    padding: 8rem;
+
+    background: var(--color-error);
+
+    font-weight: 700;
+    color: var(--color-1);
+
+    display: grid;
+    text-align: center;
+
+    visibility: hidden;
+}
+
 .container {
     height: 100vh;
     display: grid;
@@ -158,7 +178,7 @@ form button:focus {
 }
 
 /* Sem espaço pois o mesmo elemento tem as duas classes */
-.modal-wrapper.open {
+.open {
     visibility: visible;
 }
 
