@@ -29,6 +29,8 @@ body {
     background: var(--color-bodyBackground);
     font-family: var(--fontMain);
     font-size: 16rem;
+
+    padding: 32rem;
 }
 
 .container {
@@ -142,3 +144,16 @@ form button:focus {
     outline: 2rem solid var(--color-label);
 }
 
+@media (max-width: 700px) {
+    body {
+        padding: 32rem;
+    }
+
+    form {
+        max-width: 230rem;
+    }
+
+    .card {
+        padding: 32rem;
+    }
+}
