@@ -51,6 +51,14 @@ body {
     text-align: center;
 
     visibility: hidden;
+
+    transform: translateY(-40rem);
+    transition: transform 1000ms;
+}
+
+.alertError.open {
+    visibility: visible;
+    transform: translateY(0);
 }
 
 .container {
@@ -178,7 +186,7 @@ form button:focus {
 }
 
 /* Sem espaço pois o mesmo elemento tem as duas classes */
-.open {
+.modal-wrapper.open {
     visibility: visible;
 }
 
