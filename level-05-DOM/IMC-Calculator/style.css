@@ -1,7 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    font-size: 6.25%;
+    --fontMain: 'Roboto', sans-serif;
+
+    --color-0:black;
+    --color-1:white;
+    --color-mainBackground:#1E1E1E;;
+    --color-bodyBackground:#040924;
+    --color-error:#F03E3E;
+    --color-title:#0C3440;
+    --color-label:#00453A;
+    --color-input: #212529;
+    --color-inputBackground:#DCE2E9;
+    --color-inputBorder:rgba(73, 80, 87, 0.3);
+    --color-inputBorderSelect:#02799D;
+    --color-inputPlaceholder:rgba(73, 80, 87, 0.5);
+    --color-button:#02799D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background: #1E1E1E;
+    background: var(--color-bodyBackground);
+    font-family: var(--fontMain);
+    font-size: 16rem;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.card {
+    padding: 48rem 64rem 64rem;
+
+    max-width: 428px;
+    height: 440px;
+
+    background: #FFFFFF;
+    box-shadow: 0rem 2rem 4rem rgba(0, 0, 0, 0.1);
+    border-radius: 6rem;
+
+    /* margin-inline: auto; */
+}
+
+form {
+    width: 300rem;
 }
 
 main {
-    background: white;
+    background: var(--color-mainBackground);
 }
+
+.title {
+    color: var(--color-title);
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 32rem;
+    line-height: 40rem;
+}
+
+h1 {
+    margin-bottom: 32rem;
+}
+
+article.imcData {
+    display: grid;
+    gap: 16rem;
+}
+
+form label {
+    font-weight: 400;
+    font-size: 14rem;
+    line-height: 18rem;
+    color: var(--color-label);
+
+    display: block;
+    margin-bottom: 8rem;
+}
+
+form input {
+    height: 52rem;
+    width: 100%;
+
+    background: var(--color-inputBackground);
+    border: 1px solid var(--color-inputBorder);
+    border-radius: 4rem;
+
+    padding: 16rem;
+
+    color: var(--color-input);
+
+    font-weight: 400;
+    font-size: 16rem;
+    line-height: 20rem;
+}
+
+form input:focus {
+    outline: 2px solid var(--color-inputBorderSelect);
+}
+
+form input::placeholder {
+    color: var(--color-inputPlaceholder);
+}
+
+button {
+    margin-top: 32rem;
+
+    height: 52rem;
+    width: 100%;
+
+    background: var(--color-button);
+    border-radius: 4rem;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+    
+    color: var(--color-1);
+    font-weight: 700;
+    font-size: 16rem;
+    line-height: 20rem;
+
+    cursor: pointer;
+    transition: 200ms;
+}
+
+button:hover {
+    background: #0289b3;
+}
+
+form button:focus {
+    outline: 2rem solid var(--color-label);
+}
+
