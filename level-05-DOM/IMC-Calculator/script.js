@@ -1,0 +1,1 @@
+// Painel interativo onde faço o controle e análise dos dados de abate com total, peso e média mais série histórica por categorias de faixa etária, espécie, sexo e local. Também uso para criação de relatórios e tomada de decisão nos processos.

@@ -43,7 +43,6 @@ body {
     padding: 48rem 64rem 64rem;
 
     max-width: 428px;
-    height: 440px;
 
     background: #FFFFFF;
     box-shadow: 0rem 2rem 4rem rgba(0, 0, 0, 0.1);
@@ -112,7 +111,7 @@ form input::placeholder {
     color: var(--color-inputPlaceholder);
 }
 
-button {
+form button {
     margin-top: 32rem;
 
     height: 52rem;
@@ -136,12 +135,50 @@ button {
     transition: 200ms;
 }
 
-button:hover {
+form button:hover {
     background: #0289b3;
 }
 
 form button:focus {
     outline: 2rem solid var(--color-label);
+}
+
+/* >>>>>> MODAL <<<<<< */
+
+.modal-wrapper {
+    position: absolute;
+    inset: 0;
+
+    display: grid;
+    place-content: center;
+
+    background: rgb(0, 0, 0, 0.7);
+
+    visibility: hidden;
+}
+
+/* Sem espaço pois o mesmo elemento tem as duas classes */
+.modal-wrapper.open {
+    visibility: visible;
+}
+
+.modal {
+    position: relative;
+}
+
+.modal button {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 16rem;
+    right: 16rem;
+
+    cursor: pointer;
+    transition: 2ms;
+}
+
+.modal button:hover {
+    transform: scale(1.1);
 }
 
 @media (max-width: 700px) {
