@@ -30,21 +30,21 @@ export class Router {
                 linkHome.innerHTML = '<li><a href="/" class="select" onclick="route()">Home</a></li>'
                 linkUniverse.innerHTML = '<li><a href="/universe" onclick="route()">Universe</a></li>'
                 linkExploration.innerHTML = '<li><a href="/exploration" onclick="route()">Exploretion</a></li>'
-                myPage.style.backgroundImage = "url('/level-06-SPA/SPA/challenges/images/mountains-universe-1.png')"
+                myPage.style.backgroundImage = "url('/level-06-Promises/SPA/challenges/images/mountains-universe-1.png')"
                 break;
             
             case '/universe':
                 linkHome.innerHTML = '<li><a href="/" onclick="route()">Home</a></li>'
                 linkUniverse.innerHTML = '<li><a href="/universe" class="select" onclick="route()">Universe</a></li>'
                 linkExploration.innerHTML = '<li><a href="/exploration" onclick="route()">Exploretion</a></li>'
-                myPage.style.backgroundImage = "url('/level-06-SPA/SPA/challenges/images/mountains-universe-2.png')"
+                myPage.style.backgroundImage = "url('/level-06-Promises/SPA/challenges/images/mountains-universe-2.png')"
                 break;
             
             case '/exploration':
                 linkHome.innerHTML = '<li><a href="/" onclick="route()">Home</a></li>'
                 linkUniverse.innerHTML = '<li><a href="/universe" onclick="route()">Universe</a></li>'
                 linkExploration.innerHTML = '<li><a href="/exploration" class="select" onclick="route()">Exploretion</a></li>'
-                myPage.style.backgroundImage = "url('/level-06-SPA/SPA/challenges/images/mountains-universe-3.png')"
+                myPage.style.backgroundImage = "url('/level-06-Promises/SPA/challenges/images/mountains-universe-3.png')"
                 break;
         
             default:
