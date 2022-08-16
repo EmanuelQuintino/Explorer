@@ -5,7 +5,7 @@ export class Router {
     add(routeName, pageLink) {
         this.routes[routeName] = pageLink
     }
-
+        
     route(event) {
         event = event || window.event
         event.preventDefault()
@@ -63,5 +63,5 @@ export class Router {
     
         // console.log(route)
     
-    }    
+    }        
 }
