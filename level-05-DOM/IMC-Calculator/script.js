@@ -15,7 +15,7 @@ form.onsubmit = function(event) {
     
     const weight = inputWeight.value
     const height = inputHeight.value
-    const result = IMC(weight, height)
+    const result = IMC(weight, height).toFixed(2)
     
     modalWrapper.classList.add("open")
     modalMessage.innerHTML = `Seu IMC é de ${result}`
