@@ -2,7 +2,7 @@ export default function({
     weight,
     height,
 }) {
-    function IMC(weight, height) {
+    function calculateIMC(weight, height) {
         return (weight / ((height / 100) ** 2))
     }
     
@@ -10,7 +10,7 @@ export default function({
         return !(isNaN(number) || number === "")
     }
     return {
-        IMC,
+        calculateIMC,
         isNumber
     }
 }

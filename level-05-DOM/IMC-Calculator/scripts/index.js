@@ -21,7 +21,7 @@ form.onsubmit = function(event) {
     const height = inputHeight.value
 
     if(tools.isNumber(weight) && tools.isNumber(height)) {
-        const result = tools.IMC(weight, height).toFixed(2)
+        const result = tools.calculateIMC(weight, height).toFixed(2)
         modal.open()
         modal.message.innerHTML = `Seu IMC é de ${result}`
     }
