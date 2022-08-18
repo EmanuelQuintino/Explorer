@@ -9,13 +9,24 @@ function IMC(weight, height) {
     return (weight / ((height / 100) ** 2))
 }
 
+function isNumber(number) {
+    return !(isNaN(number) || number === "")
+}
+
 form.onsubmit = function(event) {
     event.preventDefault()
     
     const weight = inputWeight.value
     const height = inputHeight.value
-    const result = IMC(weight, height).toFixed(2)
+
+    if(isNumber(weight) && isNumber(height)) {
+        const result = IMC(weight, height).toFixed(2)
+        modal.open()
+        modal.message.innerHTML = `Seu IMC é de ${result}`
+    }
+    else {
+        modal.alertError.classList.add("open")
+    }
     
-    modal.open()
-    modal.message.innerHTML = `Seu IMC é de ${result}`
 }
+
