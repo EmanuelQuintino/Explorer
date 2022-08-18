@@ -1,4 +1,5 @@
 import { modal } from "./modal.js"
+import { alertError } from "./error.js"
 
 const form = document.querySelector("form")
 const inputWeight = document.querySelector("#weight")
@@ -25,8 +26,11 @@ form.onsubmit = function(event) {
         modal.message.innerHTML = `Seu IMC é de ${result}`
     }
     else {
-        modal.alertError.classList.add("open")
-    }
-    
+        alertError.open()
+
+        setTimeout(function(){
+            alertError.close()
+        }, 1800)
+    }  
 }
 

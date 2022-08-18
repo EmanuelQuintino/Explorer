@@ -53,7 +53,7 @@ body {
     visibility: hidden;
 
     transform: translateY(-40rem);
-    transition: transform 1000ms;
+    transition: transform 500ms;
 }
 
 .alertError.open {
