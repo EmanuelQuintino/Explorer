@@ -5,6 +5,15 @@ const modalWrapper = document.querySelector(".modal-wrapper")
 const modalMessage = document.querySelector(".resultIMC")
 const modalClose = document.querySelector(".close")
 
+// Estruturando os dados
+const modal = {
+    open: function() {
+        modalWrapper.classList.add("open")
+    },
+    close() {
+        modalWrapper.classList.remove("open")
+    }
+}
 
 function IMC(weight, height) {
     return (weight / ((height / 100) ** 2))
@@ -17,10 +26,10 @@ form.onsubmit = function(event) {
     const height = inputHeight.value
     const result = IMC(weight, height).toFixed(2)
     
-    modalWrapper.classList.add("open")
+    modal.open()
     modalMessage.innerHTML = `Seu IMC é de ${result}`
 }
 
 modalClose.onclick = () => {
-    modalWrapper.classList.remove("open")
+    modal.close()
 }
