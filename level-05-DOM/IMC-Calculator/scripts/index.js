@@ -30,7 +30,7 @@ form.onsubmit = function(event) {
 
         setTimeout(function(){
             alertError.close()
-        }, 1800)
+        }, 3000)
     }  
 }
 

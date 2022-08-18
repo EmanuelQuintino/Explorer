@@ -52,13 +52,12 @@ body {
 
     visibility: hidden;
 
-    transform: translateY(-40rem);
-    transition: transform 500ms;
+    /* transition: transform 500ms; */
 }
 
 .alertError.open {
-    visibility: visible;
-    transform: translateY(0);
+    animation: errorSlide;
+    animation-duration: 3000ms;
 }
 
 .container {
@@ -220,5 +219,28 @@ form button:focus {
 
     .card {
         padding: 48rem;
+    }
+}
+
+@keyframes errorSlide {
+    0% {
+        transform: translateY(-40rem);
+        visibility: visible;
+    }
+    
+    30% {
+        transform: translateY(0);
+    }
+    
+    50% {
+        transform: translateY(0);
+    }
+
+    70% {
+        transform: translateY(0);
+    }
+    
+    100% {
+        transform: translateY(-40rem);
     }
 }
