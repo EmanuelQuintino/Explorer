@@ -12,6 +12,15 @@ export const modal = {
     }
 }
 
+// "onclick" só registra um em memória por projeto
 modal.buttonClose.onclick = () => {
     modal.close()
 }
+
+function handleKeydawn(event) {
+    if(event.key == "Escape") {
+        modal.close()
+    } 
+}
+
+window.addEventListener("keydown", handleKeydawn)
