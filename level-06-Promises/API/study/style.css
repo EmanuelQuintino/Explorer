@@ -76,6 +76,7 @@ header h1 {
     border-radius: 0 4rem 4rem 0;
     border: none;
     padding: 0 16rem;
+    cursor: pointer;
 }
 
 .search button:hover {
@@ -107,9 +108,23 @@ table th:last-child {
     border-radius: 0 8rem 0 0;
 }
 
+/* table tr:nth-child(even) {
+    background: #EEE;
+}
+
+tbody tr:nth-child(odd) {
+    background: #DDD;
+} */
+
 table td {
     padding: 15rem;
     text-align: left;
+}
+
+td.users {
+    display: flex;
+    align-items: center;
+    gap: 16rem;
 }
 
 td.users img {
@@ -118,4 +133,23 @@ td.users img {
 
     object-fit: cover;
     border-radius: 50%;
+}
+
+td.users a {
+    text-decoration: none;
+}
+
+td.users a p{
+    font-weight: bold;
+}
+
+td .remove {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: red;
+}
+
+td .remove:hover {
+    transform: scale(1.5);
 }
