@@ -86,6 +86,8 @@ header h1 {
 table {
     width: 100%;
     border-collapse: collapse;
+
+    box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
 }
 
 table * {
