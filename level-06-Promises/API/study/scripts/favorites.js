@@ -2,22 +2,11 @@
 export class Favorites {
     constructor(root) {
         this.root = document.querySelector(root)
-    }
-} 
-
-// Classe com visualização e eventos do HTML
-export class FavoritesView extends Favorites {
-    constructor(root) {
-        super(root)
-
-        // console.log(this.root)
-        this.update()
+        this.load()
     }
 
-    update() {
-       this.removeAllTr()
-
-       const users = [
+    load() {
+        this.users = [
             {
                 login: "EmanuelQuintino",
                 name: "Emanuel Quintino",
@@ -31,10 +20,32 @@ export class FavoritesView extends Favorites {
                 followers: "120"
             },
         ]
+    }
+} 
 
-        users.forEach(user => {
-            console.log(user)
+// Classe com visualização e eventos do HTML
+export class FavoritesView extends Favorites {
+    constructor(root) {
+        super(root)
+
+        // console.log(this.root)
+        this.update()
+    }
+
+    update() {
+        this.removeAllTr()
+        this.users.forEach(user => {
+            const rows = this.createRow()
+            console.log(rows)
         })
+    }
+
+    removeAllTr() {
+        const tbody = this.root.querySelector("table tbody")
+        
+        tbody.querySelectorAll("tr").forEach((tr) => {
+            tr.remove()
+        });
     }
 
    createRow() {
@@ -56,12 +67,4 @@ export class FavoritesView extends Favorites {
 
     return tr
    }
-
-    removeAllTr() {
-        const tbody = this.root.querySelector("table tbody")
-        
-        tbody.querySelectorAll("tr").forEach((tr) => {
-            tr.remove()
-        });
-    }
 }
