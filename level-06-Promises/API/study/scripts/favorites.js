@@ -9,5 +9,13 @@ export class Favorites {
 export class FavoritesView extends Favorites {
     constructor(root) {
         super(root)
+
+        // console.log(this.root)
+        this.update()
+    }
+
+    update() {
+        const tbody = this.root.querySelector("table tbody")
+        console.log(tbody.querySelectorAll("tr"))
     }
 }
