@@ -22,6 +22,10 @@ export class Favorites {
         GithubUser.search("maykbrito").then(user => console.log(user))
     }
 
+    add(username) {
+        console.log(username)
+    }
+
     load() {
         this.users = JSON.parse(localStorage.getItem("@github-favorites:")) || []
     }
@@ -45,6 +49,16 @@ export class FavoritesView extends Favorites {
 
         // console.log(this.root)
         this.update()
+        this.onAdd()
+    }
+
+    onAdd() {
+        const addButton = this.root.querySelector(".search button")
+        addButton.addEventListener("click", () => {
+            const {value} = this.root.querySelector(".search input")
+
+            this.add(value)
+        })
     }
 
     update() {
