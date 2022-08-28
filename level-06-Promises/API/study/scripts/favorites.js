@@ -19,6 +19,8 @@ export class Favorites {
         this.root = document.querySelector(root)
         this.load()
 
+        GithubUser.search("EmanuelQuintino").then(user => console.log(user))
+        
         GithubUser.search("maykbrito").then(user => console.log(user))
     }
 
