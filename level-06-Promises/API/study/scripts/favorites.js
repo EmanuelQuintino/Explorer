@@ -22,8 +22,10 @@ export class Favorites {
         GithubUser.search("maykbrito").then(user => console.log(user))
     }
 
-    add(username) {
-        console.log(username)
+    async add(username) {
+        const user = await GithubUser.search(username)
+
+        console.log(user)
     }
 
     load() {
