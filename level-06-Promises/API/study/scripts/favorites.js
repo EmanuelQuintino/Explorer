@@ -4,12 +4,12 @@ export class GithubUser {
 
         return fetch(endPoint)
         .then(data => data.json())
-        .then(({login, name, public_repos, followers}) => {(
+        .then(({login, name, public_repos, followers}) => ({
             login,
             name,
             public_repos,
             followers
-        )})
+        }))
     }
 }
 
@@ -20,8 +20,6 @@ export class Favorites {
         this.load()
 
         GithubUser.search("EmanuelQuintino").then(user => console.log(user))
-        
-        GithubUser.search("maykbrito").then(user => console.log(user))
     }
 
     async add(username) {
