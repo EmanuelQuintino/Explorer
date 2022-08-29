@@ -19,13 +19,23 @@ export class Favorites {
         this.root = document.querySelector(root)
         this.load()
 
-        GithubUser.search("EmanuelQuintino").then(user => console.log(user))
+        // GithubUser.search("EmanuelQuintino").then(user => console.log(user))
     }
 
     async add(username) {
-        const user = await GithubUser.search(username)
+        try {
+            const user = await GithubUser.search(username)
+            if(user.login === undefined) {
+                throw new Error("Usuário não encontrado")
+            }
 
-        console.log(user)
+            this.users = [user, ...this.users]
+            this.update()
+
+        } catch (error) {
+            alert(error.message)
+            
+        }
     }
 
     load() {
@@ -96,7 +106,9 @@ export class FavoritesView extends Favorites {
 
    createRow() {
 
-    const tr = document.querySelector("tr") 
+    const tr = document.querySelector("tr")
+    
+    console.log(tr)
     tr.innerHTML = `
     <td class="users">
         <img src="https://github.com/EmanuelQuintino.png" alt="">
