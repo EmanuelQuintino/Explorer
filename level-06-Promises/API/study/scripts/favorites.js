@@ -39,7 +39,7 @@ export class Favorites {
     }
 
     load() {
-        this.users = JSON.parse(localStorage.getItem("@github-favorites:")) || []
+        this.entries = JSON.parse(localStorage.getItem("@github-favorites:")) || []
     }
 
     delete(user) {
@@ -75,17 +75,17 @@ export class FavoritesView extends Favorites {
 
     update() {
         this.removeAllTr()
-        this.users.forEach(user => {
-            const rows = this.createRow()
-            // console.log(rows)
-            rows.querySelector(".users img").src = `https://github.com/${user.login}.png`
-            rows.querySelector(".users img").alt = `imagem de ${user.name}`
-            rows.querySelector(".users p").textContent = user.name
-            rows.querySelector(".users span").textContent = user.login
-            rows.querySelector(".repositories").textContent = user.public_repos
-            rows.querySelector(".followers").textContent = user.followers
+        this.entries.forEach(user => {
+            const row = this.createRow()
+            // console.log(row)
+            row.querySelector(".user img").src = `https://github.com/${user.login}.png`
+            row.querySelector(".user img").alt = `Imagem de ${user.name}`
+            row.querySelector(".user p").textContent = user.name
+            row.querySelector(".user span").textContent = user.login
+            row.querySelector(".repositories").textContent = user.public_repos
+            row.querySelector(".followers").textContent = user.followers
             
-            rows.querySelector(".remove").addEventListener("click", () => {
+            row.querySelector(".remove").addEventListener("click", () => {
                 const respost = confirm("Tem certeza que deseja deletar essa linha?")
 
                 if (respost) {
@@ -93,7 +93,7 @@ export class FavoritesView extends Favorites {
                 }
             })
 
-            this.tbody.append(rows)
+            this.tbody.append(row)
         })
 
     }
@@ -106,22 +106,20 @@ export class FavoritesView extends Favorites {
 
    createRow() {
 
-    const tr = document.querySelector("tr")
-    
-    console.log(tr)
+    const tr = document.createElement("tr")
     tr.innerHTML = `
-    <td class="users">
-        <img src="https://github.com/EmanuelQuintino.png" alt="">
-        <a href="https://github.com/EmanuelQuintino" target="_blank">
-            <p>EmanuelQuintino</p>
-            <span>Emanuel Quintino</span>
-        </a>
-    </td>
-    <td class="repositories">10</td>
-    <td class="followers">234</td>
-    <td>
-        <button class="remove">&times;</button>
-    </td>`
+        <td class="user">
+            <img src="https://github.com/maykbrito.png" alt="">
+            <a href="https://github.com/maykbrito" target="_blank">
+                <p>maykbrito</p>
+                <span>maykbrito</span>
+            </a>
+        </td>
+        <td class="repositories">10</td>
+        <td class="followers">234</td>
+        <td>
+            <button class="remove">&times;</button>
+        </td>`
 
     return tr
    }

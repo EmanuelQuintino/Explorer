@@ -15,7 +15,8 @@
     box-sizing: border-box;
 }
 
-body {
+body,
+input {
     font-size: 16rem;
     font-family: 'Poppins', sans-serif;
     color: var(--color-text);
