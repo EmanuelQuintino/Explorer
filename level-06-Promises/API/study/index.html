@@ -1,67 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Class 06 API</title>
     <!-- https://www.figma.com/file/YhkFtO19NNWJLdqOCvOSm8/%5BDesafios-Explorer%5D-GitFav-(Copy)-(Copy)?node-id=0%3A1 -->
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="scripts/index.js" type="module" defer></script>
-
-</head>
-<body>
+  </head>
+  <body>
     <div class="app">
-        <header>
-            <h1>Github Favorits</h1>
-            <div class="search">
-                <label for="input-search" class="hide sr-only">Usuário do Github</label>
-                <input id="input-search" type="text" placeholder="Usuário do Github">
-                <button>&plus;</button>
-            </div>
-        </header>
-        <table>
-            <thead>
-                <tr>
-                    <th>Usuários</th>
-                    <th>Repositórios</th>
-                    <th>Followers</th>
-                    <th></th>
-                </tr>
-            </thead>
+      <header>
+        <h1>Github Favorits</h1>
+        <div class="search">
+          <label for="input-search" class="hide sr-only"
+            >Usuário do Github</label
+          >
+          <input
+            id="input-search"
+            type="text"
+            placeholder="Usuário do Github"
+          />
+          <button>&plus;</button>
+        </div>
+      </header>
+      <table>
+        <thead>
+          <tr>
+            <th>Usuários</th>
+            <th>Repositórios</th>
+            <th>Followers</th>
+            <th></th>
+          </tr>
+        </thead>
 
-            <tbody>
-                <tr class="table-row">
-                    <td class="users">
-                        <img src="https://github.com/EmanuelQuintino.png" alt="">
-                        <a href="https://github.com/EmanuelQuintino" target="_blank">
-                            <p>EmanuelQuintino</p>
-                            <span>Emanuel Quintino</span>
-                        </a>
-                    </td>
-                    <td class="repositories">10</td>
-                    <td class="followers">234</td>
-                    <td>
-                        <button class="remove">&times;</button>
-                    </td>
-                </tr>
-                <tr class="table-row">
-                    <td class="users">
-                        <img src="https://github.com/maykbrito.png" alt="">
-                        <a href="https://github.com/maykbrito" target="_blank">
-                            <p>maykbrito</p>
-                            <span>maykbrito</span>
-                        </a>
-                    </td>
-                    <td class="repositories">10</td>
-                    <td class="followers">234</td>
-                    <td>
-                        <button class="remove">&times;</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table> 
+        <tbody>
+          <tr class="table-row">
+            <td class="users">
+              <img src="https://github.com/EmanuelQuintino.png" alt="" />
+              <a href="https://github.com/EmanuelQuintino" target="_blank">
+                <p>EmanuelQuintino</p>
+                <span>Emanuel Quintino</span>
+              </a>
+            </td>
+            <td class="repositories">10</td>
+            <td class="followers">234</td>
+            <td>
+              <button class="remove">&times;</button>
+            </td>
+          </tr>
+          <tr class="table-row">
+            <td class="users">
+              <img src="https://github.com/maykbrito.png" alt="" />
+              <a href="https://github.com/maykbrito" target="_blank">
+                <p>maykbrito</p>
+                <span>maykbrito</span>
+              </a>
+            </td>
+            <td class="repositories">10</td>
+            <td class="followers">234</td>
+            <td>
+              <button class="remove">&times;</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-</body>
+  </body>
 </html>
