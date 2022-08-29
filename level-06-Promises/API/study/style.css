@@ -123,13 +123,13 @@ table td {
     text-align: left;
 }
 
-td.users {
+td.user {
     display: flex;
     align-items: center;
     gap: 16rem;
 }
 
-td.users img {
+td.user img {
     width: 100rem;
     right: auto;
 
@@ -137,11 +137,11 @@ td.users img {
     border-radius: 50%;
 }
 
-td.users a {
+td.user a {
     text-decoration: none;
 }
 
-td.users a p{
+td.user a p{
     font-weight: bold;
 }
 
