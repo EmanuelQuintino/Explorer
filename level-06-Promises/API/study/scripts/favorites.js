@@ -100,11 +100,13 @@ export class FavoritesView extends Favorites {
             row.querySelector(".followers").textContent = user.followers
             
             row.querySelector(".remove").addEventListener("click", () => {
-                const respost = confirm("Tem certeza que deseja deletar essa linha?")
+                // const respost = confirm("Tem certeza que deseja deletar essa linha?")
 
-                if (respost) {
-                    this.delete(user)
-                }
+                // if (respost) {
+                //     this.delete(user)
+                // }
+
+                this.delete(user)
             })
 
             this.tbody.append(row)
