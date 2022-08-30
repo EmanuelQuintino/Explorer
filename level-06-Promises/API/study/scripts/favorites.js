@@ -29,13 +29,16 @@ export class Favorites {
                 throw new Error("Usuário não encontrado")
             }
 
-            this.users = [user, ...this.users]
+            this.entries = [user, ...this.entries]
             this.update()
 
         } catch (error) {
             alert(error.message)
             
         }
+
+        // const user = await GithubUser.search(username)
+        // console.log(user)
     }
 
     load() {
@@ -43,11 +46,10 @@ export class Favorites {
     }
 
     delete(user) {
-        const filterEntries = this.users.filter(entry => {
-            entry.login !== user.login
-        })
+        const filterEntries = this.entries
+        .filter(entry => entry.login !== user.login)
 
-        this.users = filterEntries
+        this.entries = filterEntries
         this.update()
     }
 } 
