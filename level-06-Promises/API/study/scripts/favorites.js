@@ -31,6 +31,7 @@ export class Favorites {
 
             this.entries = [user, ...this.entries]
             this.update()
+            this.save()
 
         } catch (error) {
             alert(error.message)
@@ -45,12 +46,17 @@ export class Favorites {
         this.entries = JSON.parse(localStorage.getItem("@github-favorites:")) || []
     }
 
+    save() {
+        localStorage.setItem("@github-favorites:", JSON.stringify(this.entries))
+    }
+
     delete(user) {
         const filterEntries = this.entries
         .filter(entry => entry.login !== user.login)
 
         this.entries = filterEntries
         this.update()
+        this.save()
     }
 } 
 
