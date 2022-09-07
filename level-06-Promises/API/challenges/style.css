@@ -77,6 +77,7 @@ header h1 {
     width: 640rem;
     height: 48rem;
     background: #06181C;
+    color: white;
 }
 
 .search button {
