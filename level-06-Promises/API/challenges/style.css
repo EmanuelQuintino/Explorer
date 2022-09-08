@@ -3,7 +3,7 @@
 :root {
     font-size: 6.25%;
 
-    --color-text: #303030;
+    --color-text: #E1E1E6;;
 
     --hue: 194;
     --primary-color: hsl(var(--hue), 100%, 63%);
@@ -118,18 +118,28 @@ table {
     border-collapse: collapse;
 
     box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+
+    border-radius: 5rem;
+    border: solid 1px 
+    #4A808C;
 }
 
 table * {
-   font-size: 14rem;
+   font-size: 16rem;
    color: var(--color-text);
 }
 
 table th {
     background-color: var(--primary-color);
     text-align: left;
-    font-weight: normal;
-    padding: 15rem;
+    font-weight: 700;
+    color: var(--color-text);
+    
+    height: 64rem;
+
+    padding: 16rem 24rem 16rem 40rem;
+    
+    background: #092D38;
 }
 
 table th:nth-child(1) {
