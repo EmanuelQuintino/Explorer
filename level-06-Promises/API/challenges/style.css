@@ -120,8 +120,6 @@ table {
     box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
 
     border-radius: 5rem;
-    border: solid 1px 
-    #4A808C;
 }
 
 table * {
@@ -140,22 +138,42 @@ table th {
     padding: 16rem 24rem 16rem 40rem;
     
     background: #092D38;
+
+    border-top: solid 1px #4A808C;
+}
+
+table tr {
+    /* border: solid 1px #4A808C; */
 }
 
 table th:nth-child(1) {
-    border-radius: 8rem 0 0 0;
+    /* border-radius: 8rem 0 0 0; */
 }
 
 table th:last-child {
-    border-radius: 0 8rem 0 0;
+    /* border-radius: 0 8rem 0 0; */
 }
 
 table tr:nth-child(even) {
     background: #06161B;
+    border: solid 1px #4A808C;;
+
 }
 
 table tr:nth-child(odd) {
     background:  black;
+    border-left: solid 1px #4A808C;
+    border-right: solid 1px #4A808C;
+
+    
+}
+
+table tbody tr:last-child {
+    border-left: solid 1px #4A808C;
+    border-right: solid 1px #4A808C;
+    border-bottom: solid 1px #4A808C;
+
+    
 }
 
 table td {
