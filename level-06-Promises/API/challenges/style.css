@@ -151,11 +151,11 @@ table th:last-child {
 }
 
 table tr:nth-child(even) {
-    background: #EEE;
+    background: #06161B;
 }
 
 table tr:nth-child(odd) {
-    background: #DDD;
+    background:  black;
 }
 
 table td {
