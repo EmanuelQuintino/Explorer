@@ -27,7 +27,7 @@ input {
 .app {
     max-width: 1120rem;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 8rem;
 }
 
 header {
@@ -38,7 +38,7 @@ header {
     margin-top: 115rem;
     margin-bottom: 87rem;
 
-    width: 1120rem;
+    width: 100%;
 }
 
 .hide {
@@ -74,7 +74,7 @@ header h1 {
     border-radius: 5rem;
     padding: 16rem;
 
-    width: 462rem;
+    width: 350rem;
     height: 48rem;
     background: #06181C;
     color: white;
@@ -204,4 +204,20 @@ td .remove {
 
 td .remove:hover {
     transform: scale(1.5);
+}
+
+.hidden {
+    display: none;
+}
+
+tfoot {
+    border-bottom: solid 1px #4A808C;
+}
+
+tfoot tr td {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 60rem;
 }
