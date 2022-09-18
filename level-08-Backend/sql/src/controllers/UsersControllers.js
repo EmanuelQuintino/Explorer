@@ -8,7 +8,7 @@ class UsersController {
 
     create(request, response) {
         const {name, email, password} = request.body;
-        // response.send(`Você chamou o POST! Name: ${name}, E-mail: ${email}, Password: ${password}`)
+        
         response.status(201).json({name, email, password})
     }
 }
