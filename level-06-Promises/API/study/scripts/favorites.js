@@ -2,9 +2,10 @@ import { GithubUser } from "./gitHubUser.js"
 
 // Classe com a lógica dos dados
 export class Favorites {
-    constructor(root) {
-        this.root = document.querySelector(root)
-        this.load()
+  constructor(root) {
+    this.root = document.querySelector(root);
+    this.load();
+  }
 
         // GithubUser.search("EmanuelQuintino").then(user => console.log(user))
     }
@@ -55,24 +56,24 @@ export class Favorites {
 
 // Classe com visualização e eventos do HTML
 export class FavoritesView extends Favorites {
-    constructor(root) {
-        super(root)
+  constructor(root) {
+    super(root);
 
-        this.tbody = this.root.querySelector("table tbody")
+    this.tbody = this.root.querySelector("table tbody");
 
-        // console.log(this.root)
-        this.update()
-        this.onAdd()
-    }
+    // console.log(this.root)
+    this.update();
+    this.onAdd();
+  }
 
-    onAdd() {
-        const addButton = this.root.querySelector(".search button")
-        addButton.addEventListener("click", () => {
-            const {value} = this.root.querySelector(".search input")
+  onAdd() {
+    const addButton = this.root.querySelector(".search button");
+    addButton.addEventListener("click", () => {
+      const { value } = this.root.querySelector(".search input");
 
-            this.add(value)
-        })
-    }
+      this.add(value);
+    });
+  }
 
     update() {
         this.removeAllTr()
@@ -100,13 +101,15 @@ export class FavoritesView extends Favorites {
             this.tbody.append(row)
         })
 
-    }
+      this.tbody.append(rows);
+    });
+  }
 
-    removeAllTr() {        
-        this.tbody.querySelectorAll("tr").forEach((tr) => {
-            tr.remove()
-        });
-    }
+  removeAllTr() {
+    this.tbody.querySelectorAll("tr").forEach((tr) => {
+      tr.remove();
+    });
+  }
 
    createRow() {
 
@@ -125,6 +128,6 @@ export class FavoritesView extends Favorites {
             <button class="remove">&times;</button>
         </td>`
 
-    return tr
-   }
+    return tr;
+  }
 }
