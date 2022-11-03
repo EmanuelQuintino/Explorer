@@ -41,5 +41,3 @@ for (const studant of studants) {
         ${studant.name} teve média de: ${averageStudant}
         ${situation}`)
 }
-
-
