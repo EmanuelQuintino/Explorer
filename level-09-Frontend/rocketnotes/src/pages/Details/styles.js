@@ -4,4 +4,3 @@ export const Container = styled.div `
     background: black;
     color: white;
 `;
-
