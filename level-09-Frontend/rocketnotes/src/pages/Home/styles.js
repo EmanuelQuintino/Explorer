@@ -38,20 +38,25 @@ export const Brand = styled.div `
 
 export const Menu = styled.ul `
     grid-area: menu;
-    background: green;
+
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+
+    padding-top: 64px;
+    text-align: center;
+
+    > li {
+        margin-bottom: 24px;
+    }
 `;
 
 export const Search = styled.div `
     grid-area: search;
-    background: violet;
 `;
 
 export const Content = styled.div `
     grid-area: content;
-    background: blue;
 `;
 
 export const NewNote = styled.button `
     grid-area: newNote;
-    background: yellow;
 `;
