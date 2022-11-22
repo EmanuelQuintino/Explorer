@@ -12,8 +12,10 @@ export const Container = styled.div `
     border-radius: 10px;
 
     > input {
-        height: 56px;
+        height: 46px;
         width: 100%;
+
+        font-size: 14px;
 
         padding: 12px;
 
@@ -22,7 +24,7 @@ export const Container = styled.div `
         border: none;
 
         &:placeholder {
-            background-color: ${({ theme }) => theme.COLORS.GRAY_300};    
+            background-color: ${({ theme }) => theme.COLORS.GRAY_300};
         }
     }
 
