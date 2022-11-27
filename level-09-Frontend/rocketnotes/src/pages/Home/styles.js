@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { Link } from "react-router-dom"
 
 export const Container = styled.div `
     width: 100%;
@@ -8,7 +8,7 @@ export const Container = styled.div `
     display: grid;
     grid-template-columns: 250px auto;
     grid-template-rows: 105px 128px auto 64px;
-    grid-template-areas: 
+    grid-template-areas:
     "brand header"
     "menu search"
     "menu content"
@@ -26,7 +26,7 @@ export const Brand = styled.div `
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
-    
+
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
 
     > h1 {
@@ -60,11 +60,11 @@ export const Content = styled.div `
     overflow-y: auto;
 `;
 
-export const NewNote = styled.button `
+export const NewNote = styled(Link) `
     grid-area: newNote;
 
     background-color: ${({ theme }) => theme.COLORS.ORANGE};
-    border: none;
+    color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
 
     display: flex;
     align-items: center;

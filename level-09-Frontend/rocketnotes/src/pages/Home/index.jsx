@@ -29,16 +29,16 @@ export function Home() {
             <Content>
                 <Section title="Minhas notas">
                 <Note data={{
-                        title: "React", 
+                        title: "React",
                         tags: [
-                            {id: "1", name: "react"}, 
-                            {id: "2", name: "rocketseat"} 
-                        ] 
+                            {id: "1", name: "react"},
+                            {id: "2", name: "rocketseat"}
+                        ]
                     }} />
                 </Section>
             </Content>
 
-            <NewNote>
+            <NewNote to="/new">
                 <FiPlus />
                 Criar notas
             </NewNote>
