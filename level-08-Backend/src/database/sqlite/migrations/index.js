@@ -1,8 +1,8 @@
-const sqliteConnection = require("../../sqlite")
+const sqliteConnection = require("..")
 
 const createUsers = require("./createUsers")
 
-async function migrationsRun(){
+async function migrationsRun() {
     const schemas = [
         createUsers
     ].join('')
